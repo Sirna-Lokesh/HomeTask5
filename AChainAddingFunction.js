@@ -1,6 +1,8 @@
 function add(x) {
-    // console.log(x);
     return function(y) {
-        return x + y;
+        if(y)
+            return add(x + y);
+        else
+            return x;
     };
 }
